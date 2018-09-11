@@ -1,0 +1,47 @@
+# addition-of-matrices
+//1st program on C
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{clrscr();
+int M1[4][4],M2[4][4],i,j,sum[4][4],n,k;
+printf("Enter the no. of rows of Matrices:");
+scanf("%d",&n);
+printf("Enter the no. of column of Matrices:");
+scanf("%d",&k);
+for(i=0;i<n;i++)
+{
+	for(j=0;j<k;j++)
+	{
+	printf("M1[%d][%d]=",i,j);
+	scanf("%d",&M1[i][j]);
+	if(M1[i][j]==123)
+	{
+	exit(0);
+	}
+	}
+	printf("");
+}
+printf("\n");
+for(i=0;i<n;i++)
+{
+	for(j=0;j<k;j++)
+	{
+	printf("M2[%d][%d]=",i,j);
+	scanf("%d",&M2[i][j]);
+	sum[i][j]=M1[i][j]+M2[i][j];
+	}
+	printf("");
+}
+printf("\n");
+for(i=0;i<n;i++)
+{
+	for(j=0;j<k;j++)
+	{
+	printf("Sum[%d][%d]=%d  ",i,j,sum[i][j]);
+	}
+	printf("\n");
+}
+getch();
+}
